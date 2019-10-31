@@ -10,9 +10,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
-  script: make -f unix/Makefile generic && mv zip $PREFIX/bin
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - make
+  host:
+  run:
 
 test:
   commands:
