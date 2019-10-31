@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   skip: True  # [win]
-  script: make -f unix/Makefile generic && mv zip $PREFIX/bin
+  script: make -f unix/Makefile generic CC=$CC CPP=$CPP && mv zip $PREFIX/bin
 
 requirements:
   build:
