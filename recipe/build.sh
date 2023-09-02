@@ -12,5 +12,5 @@ make -f unix/Makefile \
   generic \
   prefix="${PREFIX}" \
   CC="${CC}" \
-  CPP="${CPP}" \
+  CPP="${CXX}" \
   install
