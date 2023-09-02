@@ -13,4 +13,6 @@ make -f unix/Makefile \
   prefix="${PREFIX}" \
   CC="${CC}" \
   CPP="${CXX}" \
+  LARGE_FILE_SUPPORT=1 \
+  ZIP64_SUPPORT=1 \
   install
