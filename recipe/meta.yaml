@@ -26,6 +26,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - bzip2  # [build_platform != target_platform]
     - make
   host:
     - bzip2
