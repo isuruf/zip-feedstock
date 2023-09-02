@@ -37,6 +37,7 @@ test:
     - which {{ bin }}
     - which {{ bin }} | grep "${PREFIX}"
     - {{ bin }} -h
+    - man {{ bin }}
     {% endfor %}
 
 about:
