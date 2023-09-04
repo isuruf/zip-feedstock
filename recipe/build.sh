@@ -13,5 +13,4 @@ make -f unix/Makefile \
   prefix="${PREFIX}" \
   CC="${CC}" \
   CPP="${CXX}" \
-  CFLAGS="${CFLAGS} -DLARGE_FILE_SUPPORT -DZIP64_SUPPORT" \
   install
