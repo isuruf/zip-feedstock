@@ -8,8 +8,8 @@ export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 mkdir -p bzip2
 
 # patch in default conda-forge compiler flags
-sed -i unix/Makefile -e "s|^CFLAGS_NOOPT =|CFLAGS_NOOPT = $CFLAGS $CPPFLAGS |"
-sed -i unix/configure -e "s|^LFLAGS1=''|LFLAGS1='$LDFLAGS'|"
+sed -i "s|^CFLAGS_NOOPT =|CFLAGS_NOOPT = $CFLAGS $CPPFLAGS |" unix/Makefile
+sed -i "s|^LFLAGS1=''|LFLAGS1='$LDFLAGS'|" unix/configure
 
 # apply security patches from fedora
 patch -p1 -i zip-3.0-currdir.patch
