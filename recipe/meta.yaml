@@ -7,8 +7,6 @@ package:
 source:
   - url: https://downloads.sourceforge.net/infozip/zip{{ version.replace(".", "") }}.tar.gz
     sha256: f0e8bb1f9b7eb0b01285495a2699df3a4b766784c1765a8f1aeedf63c0806369
-    patches:
-      - 0000-cross-compile-skip-uid-large-check.diff  # [build_platform != target_platform]
   # patches as applied in
   # https://gitlab.archlinux.org/archlinux/packaging/packages/zip/-/blob/main/PKGBUILD?ref_type=heads
   - url: https://src.fedoraproject.org/rpms/zip/raw/rawhide/f/zip-3.0-currdir.patch
@@ -27,11 +25,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - bzip2  # [build_platform != target_platform]
     - make
-  host:
-    - bzip2
 
 test:
   commands:
