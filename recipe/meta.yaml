@@ -26,6 +26,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
+    - sed
 
 test:
   commands:
