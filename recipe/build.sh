@@ -3,7 +3,6 @@
 set -eux
 
 export CFLAGS="${CFLAGS} -DLARGE_FILE_SUPPORT -DZIP64_SUPPORT"
-export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
 mkdir -p bzip2
 
