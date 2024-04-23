@@ -24,8 +24,7 @@ source:
       - "{{ SRC_DIR }}/zipnote.patch"
 
 build:
-  number: 3
-  skip: True  # [win]
+  number: 4
 
 requirements:
   build:
