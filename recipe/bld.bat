@@ -1,3 +1,3 @@
 @echo on
 
-nmake -f win32/makefile.a64
+nmake -f win32/makefile.w32
