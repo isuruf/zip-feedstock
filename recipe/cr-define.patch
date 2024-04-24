@@ -1,3 +1,15 @@
+diff -ruN zip30.orig/win32/makenoas.w32 zip30/win32/makenoas.w32
+--- zip30.orig/win32/makenoas.w32	2024-04-24 10:20:37.193548406 -0600
++++ zip30/win32/makenoas.w32	2024-04-24 12:16:57.124182263 -0600
+@@ -87,7 +87,7 @@
+ # by passing the -stub switch to the 32-bit linker to specify the 16-bit part.
+ 
+ LD=link -nologo
+-LDFLAGS=user32.lib advapi32.lib /OPT:NOWIN98 /INCREMENTAL:NO /PDB:$*.pdb $(EXTLIB)
++LDFLAGS=user32.lib advapi32.lib /INCREMENTAL:NO /PDB:$*.pdb $(EXTLIB)
+ SYMS=/DEBUG:full /DEBUGTYPE:CV
+ !IFDEF debug
+ LDFLAGS=$(LDFLAGS) $(SYMS)
 diff -ruN zip30.orig/zip.h zip30/zip.h
 --- zip30.orig/zip.h	2024-04-24 10:20:37.197548487 -0600
 +++ zip30/zip.h	2024-04-24 10:27:46.414100485 -0600
