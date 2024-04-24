@@ -22,6 +22,7 @@ source:
       - '{{ SRC_DIR }}/zip-3.0-exec-shield.patch'
       - '{{ SRC_DIR }}/zip-3.0-format-security.patch'
       - '{{ SRC_DIR }}/zipnote.patch'
+      - cr-define.patch  # [win]
 
 build:
   number: 4
