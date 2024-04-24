@@ -29,8 +29,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - make
-    - sed
+    - make  # [unix]
+    - sed  # [unix]
 
 test:
   commands:
@@ -42,7 +42,7 @@ test:
 
 about:
   home: https://infozip.sourceforge.net
-  license: BSD-like
+  license: LicenseRef-Info-ZIP
   license_file: LICENSE
   summary: simple program for unzipping files
   dev_url: https://sourceforge.net/projects/infozip
