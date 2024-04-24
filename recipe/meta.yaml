@@ -18,10 +18,10 @@ source:
   - url: https://downloads.sourceforge.net/infozip/zip{{ version.replace(".", "") }}.tar.gz
     sha256: f0e8bb1f9b7eb0b01285495a2699df3a4b766784c1765a8f1aeedf63c0806369
     patches:
-      - "{{ SRC_DIR }}/zip-3.0-currdir.patch"
-      - "{{ SRC_DIR }}/zip-3.0-exec-shield.patch"
-      - "{{ SRC_DIR }}/zip-3.0-format-security.patch"
-      - "{{ SRC_DIR }}/zipnote.patch"
+      - "{{ SRC_DIR|replace(r"\", "/") }}/zip-3.0-currdir.patch"
+      - "{{ SRC_DIR|replace(r"\", "/") }}/zip-3.0-exec-shield.patch"
+      - "{{ SRC_DIR|replace(r"\", "/") }}/zip-3.0-format-security.patch"
+      - "{{ SRC_DIR|replace(r"\", "/") }}/zipnote.patch"
 
 build:
   number: 4
