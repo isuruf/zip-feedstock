@@ -33,6 +33,7 @@ requirements:
     - {{ compiler('c') }}
     - make  # [unix]
     - sed  # [unix]
+    - autotools_clang_conda  # [win]
 
 test:
   commands:
