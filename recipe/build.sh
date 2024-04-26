@@ -4,6 +4,10 @@ set -eux
 
 export CFLAGS="${CFLAGS} -DLARGE_FILE_SUPPORT -DZIP64_SUPPORT"
 
+if [[ "$target_platform" == win-* ]]; then
+  export CFLAGS="${CFLAGS} -DNO_UNISTD_H=1"
+fi
+
 mkdir -p bzip2
 
 # patch in default conda-forge compiler flags
