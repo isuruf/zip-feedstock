@@ -10,4 +10,4 @@ mkdir -p bzip2
 sed -i "s|^CFLAGS_NOOPT =|CFLAGS_NOOPT = $CFLAGS $CPPFLAGS |" unix/Makefile
 sed -i "s|^LFLAGS1=''|LFLAGS1='$LDFLAGS'|" unix/configure
 
-make -f unix/Makefile generic prefix="${PREFIX}" CC="${CC}" CPP="${CC_FOR_BUILD} -E" install
+make -f unix/Makefile generic prefix="${PREFIX}" CC="${CC}" CPP="${CC} -E" install
